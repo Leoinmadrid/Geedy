@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.game-shell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+}
+
+canvas {
+    display: block;
+    width: min(96vw, 640px);
+    height: auto;
+    image-rendering: pixelated;
+    border: 3px solid white;
+    background: #05051a;
+    touch-action: none;
+}
+
+.touch-controls {
+    display: none;stroke-dashoffset: ;
+    justify-content: space-between;
+    width: min(96vw, 640px);
+    gap: 12px;
+    pointer-events: auto;
+}
+
+.touch-btn {
+    flex: 1;
+    min-height: 64px;
+    border: 3px solid #5DE6FF;
+    background: rgba(93, 230, 255, 0.22);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 12px;
+    touch-action: manipulation;
+    user-select: none;
+}
+
+.jump-btn {
+    flex: 1.2;
+    border-color: #FFD400;
+    background: rgba(255, 212, 0, 0.25);
+}
+
+@media (pointer: coarse) and (max-width: 900px) {
+    .touch-controls {
+        display: flex;
+    }
+}
